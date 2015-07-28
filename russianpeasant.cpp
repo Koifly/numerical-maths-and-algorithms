@@ -11,18 +11,46 @@ bool evenFlag (int n){
   return (n%2 == 0);
 }
 
-int russian (int a, int b){
-     if (evenFlag (a/2)){
-      a = a/2;
-      b = b*2;
-      russian (a,b);
+int russian (int a, int b, int s) {
+
+  if (a != 1) {
+
+    bool isEven = evenFlag(a);
+    int newA = a / 2;
+    int newB = b * 2;
+
+    if ( isEven ) {
+      russian (newA,newB,s);
+    } else {
+      s = s + b;
+      russian (newA,newB,s);
+    }
+
+  } else {
+
+    cout << s + b << endl;
+    return 0;
   }
-  else{
-      cout << b*2 << endl;
-  }
+
 }
 
+
 int main (){
-  Point numbers = {4,8};
-  russian (numbers.x, numbers.y);
+  Point numbers;
+
+  cout << "Give me a positive integer :) " << flush;
+  cin >> numbers.x;
+  if (!cin.good() && cin <= 0) {
+    cout << "Hey! That's not a valid number!" << endl;
+    return 0;
+  }
+
+  cout << "Now another one! " << flush;
+  cin >> numbers.y;
+  if (!cin.good() && cin <= 0) {
+    cout << "Hey! That's not a valid number!" << endl;
+    return 0;
+  }
+
+  russian (numbers.x, numbers.y, 0);
 }
