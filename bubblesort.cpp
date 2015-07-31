@@ -10,7 +10,7 @@ struct Sequence {
 
 
 
-int compare (int& x, int& y) {        //this compares and swapps
+int compare (int& x, int& y) {        //this compares and swaps
     if (x > y) {
         int perm = x;
         x = y;
