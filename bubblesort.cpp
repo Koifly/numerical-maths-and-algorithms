@@ -51,7 +51,7 @@ Sequence pass (Sequence& input){
 int main() {
     Sequence numbers;
 
-    cout << "Give me five numbers, hitting enter after each one." << flush;
+    cout << "Give me five integers, hitting enter after each one." << flush;
     cin >> numbers.a;
     cin >> numbers.b;
     cin >> numbers.c;
