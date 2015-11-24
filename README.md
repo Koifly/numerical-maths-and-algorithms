@@ -1,2 +1,2 @@
-# think-cpp
-Trial code from "[How to think like a computer scientist](http://greenteapress.com/thinkcpp/), C++ Version", and a few experiments.
+# Numerical maths and sorting algorithms
+Experiments with various algorithms of differnt kinds, written in C++.
