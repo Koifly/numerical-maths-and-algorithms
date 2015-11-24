@@ -11,9 +11,10 @@ double rectangles (double a, double b, char letter) {
 
 	double initial;
 	double n = 10;
-    double h = (a + b) / n;
-    double sum = 0;
+        double h = (a + b) / n;
+        double sum = 0;
 
+	//the kind of rectangle approximation is chosen
 	if (letter == 'a') {
 		initial = 0.0;
 	} else if (letter == 'b') {
@@ -84,9 +85,12 @@ double integrate (double a, double b) {
 }
 
 
-
+//here we decide with function to carry out depending on the user's answer
 double integrateMe (double a, double b, char letter) {
 	double result;
+	
+	//this could be also done with a series of if statements
+	//but I feel switch is clearer in this case
 	switch (letter) {
 	case 'a':
 		result = rectangles (a, b, letter);
@@ -117,6 +121,10 @@ double integrateMe (double a, double b, char letter) {
 
 
 int main () {
+
+	//this program can carry out several different methods of integral approximation
+	//it takes a user-defined interval
+	//all methods are carried out on the function f(x) = x
 
 	cout << "INTEGRAL APPROXIMATION" << endl;
 	cout << "Which method of integration would you like to see? type the letter" << endl;
