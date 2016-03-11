@@ -1,7 +1,11 @@
+// 27-06-2015
+//Insertion sort
+
 #include <iostream>
 #include <vector>
 
 using namespace std;
+
 
 int swap (int& n, int& m) {
   if (n > m) {
@@ -9,8 +13,10 @@ int swap (int& n, int& m) {
     n = m;
     m = temp;
   }else {
+    
     return 0;
   }
+  
   return 0;
 }
 
@@ -21,6 +27,7 @@ vector <int> dotheThing (int a, vector <int>& v) {
     int i = a - 1;
     swap (v[i], v[a]);
   }
+  
   return v;
 }
 
@@ -29,6 +36,7 @@ vector <int> insertionSort(vector <int>& v) {
   for (int i = 1; i < v.size(); i++){
     dotheThing (i, v);
   }
+  
   return v;
 }
 
@@ -49,11 +57,9 @@ int main() {
 
   insertionSort (numbers);
 
-
   for (int j = 0; j < numbers.size(); j++) {
     cout << numbers[j] << ", ";
   }
-
 
   return 0;
 }
