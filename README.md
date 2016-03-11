@@ -1,2 +1,2 @@
 # Numerical maths and sorting algorithms
-Experiments with various algorithms of differnt kinds plus a few unrelated things, written in C++. 
+Experiments with various algorithms of different kinds plus a few unrelated things, all in C++. 
