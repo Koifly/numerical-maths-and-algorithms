@@ -1,5 +1,9 @@
+// 28-07-2015
+//Russian Peasant algorithm
+
 #include <iostream>
 #include <cmath>
+
 using namespace std;
 
 
@@ -8,30 +12,28 @@ struct Point{
 };
 
 bool evenFlag (int n){
-  return (n%2 == 0);
+  
+  return (n % 2 == 0);
 }
 
 int russian (int a, int b, int s) {
 
   if (a != 1) {
-
     bool isEven = evenFlag(a);
     int newA = a / 2;
     int newB = b * 2;
 
     if ( isEven ) {
       russian (newA,newB,s);
-    } else {
+    }else {
       s = s + b;
       russian (newA,newB,s);
     }
-
-  } else {
-
+  }else {
     cout << s + b << endl;
+    
     return 0;
   }
-
 }
 
 
@@ -42,6 +44,7 @@ int main (){
   cin >> numbers.x;
   if (!cin.good() && cin <= 0) {
     cout << "Hey! That's not a valid number!" << endl;
+    
     return 0;
   }
 
@@ -49,8 +52,11 @@ int main (){
   cin >> numbers.y;
   if (!cin.good() && cin <= 0) {
     cout << "Hey! That's not a valid number!" << endl;
+    
     return 0;
   }
 
   russian (numbers.x, numbers.y, 0);
+  
+  return 0;
 }
