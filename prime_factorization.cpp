@@ -1,3 +1,6 @@
+// 11-03-2016
+//Prime factorization of any number between 1 and 1000
+
 #include <iostream>
 #include <vector>
 
