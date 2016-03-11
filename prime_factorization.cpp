@@ -19,7 +19,6 @@ bool isPrime (int n) {
   return true;
 }
 
-
 vector <int> findNextPrime () {
   
   vector <int> p (168);
@@ -38,7 +37,6 @@ vector <int> findNextPrime () {
 
   return p;
 }
-
 
 void factorize (int n) {
   
@@ -71,7 +69,6 @@ void factorize (int n) {
 
   return;
 }
-
 
 int main () {
 
